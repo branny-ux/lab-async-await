@@ -1,4 +1,4 @@
-const chai = require('chai');
+ const chai = require('chai');
 global.expect = chai.expect;
 
 const fs = require('fs');
@@ -42,11 +42,12 @@ global.XMLHttpRequest = dom.window.XMLHttpRequest;
 // Sample test suite for JavaScript event handling
 describe('Asynchronous Fetching ', () => {
   it('should fetch to external api and add information to page', async() => {
-    await new Promise(resolve => setTimeout(resolve, 200)); 
+    await new Promise(resolve => setTimeout(resolve, 800)); 
     let postDisplay = document.querySelector("#post-list")
     expect(postDisplay.innerHTML).to.include('sunt aut')
     
   })
+
   it('should create an h1 and p element to add', async() => {
     await new Promise(resolve => setTimeout(resolve, 200)); 
     let h1 = document.querySelector("h1")
@@ -54,4 +55,5 @@ describe('Asynchronous Fetching ', () => {
     expect(h1.textContent).to.include("sunt aut facere repellat")
     expect(p.textContent).to.include("quia et suscipit\nsuscipit")
   })
+  
 })
