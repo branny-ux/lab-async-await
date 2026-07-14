@@ -11,6 +11,7 @@ async function fetchPosts() {
     } catch (error) {
         console.error(error);
     }
+
 }
 
 function displayPosts(posts) {
@@ -27,6 +28,7 @@ function displayPosts(posts) {
 
         postList.appendChild(li);
     });
+    
 }
 
 fetchPosts();
